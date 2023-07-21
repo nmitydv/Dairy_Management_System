@@ -1,10 +1,6 @@
 
 package dairy_m;
 
-/**
- *
- * @author 91975
- */
 public class Gui extends javax.swing.JDialog {
 
     public Gui(java.awt.Frame parent, boolean modal) {
@@ -31,9 +27,7 @@ public class Gui extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        // </editor-fold>
 
-        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Gui dialog = new Gui(new javax.swing.JFrame(), true);
@@ -64,7 +58,7 @@ public class Gui extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        Title.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        Title.setFont(new java.awt.Font("Segoe UI", 3, 36));
         Title.setForeground(new java.awt.Color(255, 255, 255));
         Title.setText(" Sant Singaji Dairy ");
         Title.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -72,7 +66,7 @@ public class Gui extends javax.swing.JDialog {
         getContentPane().add(Title);
         Title.setBounds(290, 30, 340, 62);
 
-        farmer_detail.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        farmer_detail.setFont(new java.awt.Font("Segoe UI", 3, 18));
         farmer_detail.setText("Farmer's Detail ");
         farmer_detail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         farmer_detail.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +77,7 @@ public class Gui extends javax.swing.JDialog {
         getContentPane().add(farmer_detail);
         farmer_detail.setBounds(20, 140, 170, 50);
 
-        exit.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        exit.setFont(new java.awt.Font("Segoe UI", 3, 18));
         exit.setText("Exit");
         exit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +88,7 @@ public class Gui extends javax.swing.JDialog {
         getContentPane().add(exit);
         exit.setBounds(710, 140, 150, 50);
 
-        bills.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        bills.setFont(new java.awt.Font("Segoe UI", 3, 18));
         bills.setText("Bill's");
         bills.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bills.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +99,7 @@ public class Gui extends javax.swing.JDialog {
         getContentPane().add(bills);
         bills.setBounds(500, 140, 150, 50);
 
-        milk_information.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        milk_information.setFont(new java.awt.Font("Segoe UI", 3, 18));
         milk_information.setText("Milk Information");
         milk_information.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         milk_information.addActionListener(new java.awt.event.ActionListener() {
@@ -116,42 +110,37 @@ public class Gui extends javax.swing.JDialog {
         getContentPane().add(milk_information);
         milk_information.setBounds(240, 140, 180, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg")));
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 590);
 
         pack();
-    }// </editor-fold>
+    }
 
-    private void exitActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_exitActionPerformed
-        // TODO add your handling code here:
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {
+
         System.exit(0);
-    }// GEN-LAST:event_exitActionPerformed
+    }
 
-    private void milk_informationActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_milk_informationActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_milk_informationActionPerformed
+    private void milk_informationActionPerformed(java.awt.event.ActionEvent evt) {
 
-    private void billsActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_billsActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_billsActionPerformed
+    }
 
-    private void farmer_detailActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmer_detailActionPerformed
+    private void billsActionPerformed(java.awt.event.ActionEvent evt) {
+
+    }
+
+    private void farmer_detailActionPerformed(java.awt.event.ActionEvent evt) {
         Farmer f = new Farmer();
         dispose();
-    }// GEN-LAST:event_farmer_detailActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Title;
     private javax.swing.JButton bills;
     private javax.swing.JButton exit;
     private javax.swing.JButton farmer_detail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton milk_information;
-    // End of variables declaration//GEN-END:variables
+
 }
