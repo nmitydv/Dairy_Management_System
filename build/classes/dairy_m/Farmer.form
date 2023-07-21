@@ -24,30 +24,48 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="back" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="660" pref="660" max="-2" attributes="0"/>
+              <Component id="back" min="-2" pref="90" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-              <Component id="farmerdetails" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="329" max="32767" attributes="0"/>
-              <Component id="newfarmer" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="340" pref="340" max="-2" attributes="0"/>
+              <Component id="newfarmer" min="-2" pref="170" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+              <Component id="farmerdetails" min="-2" pref="190" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="290" pref="290" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="840" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="back" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="farmerdetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="newfarmer" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="489" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
+              <Component id="back" min="-2" pref="40" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
+              <Component id="newfarmer" min="-2" pref="40" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
+              <Component id="farmerdetails" min="-2" pref="40" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" pref="40" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="520" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,7 +73,15 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="back">
       <Properties>
-        <Property name="text" type="java.lang.String" value="back"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" Back "/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backActionPerformed"/>
@@ -63,7 +89,15 @@
     </Component>
     <Component class="javax.swing.JButton" name="farmerdetails">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Farmer Details"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" Existing  Detail&apos;s  "/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="farmerdetailsActionPerformed"/>
@@ -71,11 +105,38 @@
     </Component>
     <Component class="javax.swing.JButton" name="newfarmer">
       <Properties>
-        <Property name="text" type="java.lang.String" value="New Farmer"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" Add New Detail&apos;s  "/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newfarmerActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="32" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" Farmer&apos;s Detail "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/new.jpg"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
