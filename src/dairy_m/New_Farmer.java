@@ -8,17 +8,17 @@ package dairy_m;
  *
  * @author 91975
  */
-public class Farmer extends javax.swing.JDialog {
+public class New_Farmer extends javax.swing.JDialog {
 
     /**
-     * Creates new form Farmer
+     * Creates new form New_Farmer
      */
-    public Farmer(java.awt.Frame parent, boolean modal) {
+    public New_Farmer(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
 
-    public Farmer() {
+    public New_Farmer() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -27,20 +27,24 @@ public class Farmer extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(New_Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(New_Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(New_Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(New_Farmer.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
         // </editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Farmer dialog = new Farmer(new javax.swing.JFrame(), true);
+                New_Farmer dialog = new New_Farmer(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -59,36 +63,20 @@ public class Farmer extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
-        farmerdetails = new javax.swing.JButton();
-        newfarmer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel1.setText("New Farmer Detail's");
 
         back.setText("back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
-            }
-        });
-
-        farmerdetails.setText("Farmer Details");
-        farmerdetails.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                farmerdetailsActionPerformed(evt);
-            }
-        });
-
-        newfarmer.setText("New Farmer");
-        newfarmer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newfarmerActionPerformed(evt);
             }
         });
 
@@ -99,40 +87,23 @@ public class Farmer extends javax.swing.JDialog {
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(back)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(139, 139, 139)
-                                .addComponent(farmerdetails)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329,
-                                        Short.MAX_VALUE)
-                                .addComponent(newfarmer)
-                                .addGap(181, 181, 181)));
+                                .addGap(283, 283, 283)
+                                .addComponent(jLabel1)
+                                .addContainerGap(411, Short.MAX_VALUE)));
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(back)
-                                .addGap(44, 44, 44)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(farmerdetails)
-                                        .addComponent(newfarmer))
-                                .addContainerGap(489, Short.MAX_VALUE)));
+                                .addGap(17, 17, 17)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(back)
+                                        .addComponent(jLabel1))
+                                .addContainerGap(533, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void newfarmerActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_newfarmerActionPerformed
-        New_Farmer nf = new New_Farmer();
-        dispose();
-    }// GEN-LAST:event_newfarmerActionPerformed
-
-    private void farmerdetailsActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmerdetailsActionPerformed
-        Farmer_details fd = new Farmer_details();
-        dispose();
-    }// GEN-LAST:event_farmerdetailsActionPerformed
-
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed
-        Gui g = new Gui();
+        Farmer f = new Farmer();
         dispose();
     }// GEN-LAST:event_backActionPerformed
 
@@ -142,7 +113,6 @@ public class Farmer extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
-    private javax.swing.JButton farmerdetails;
-    private javax.swing.JButton newfarmer;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
