@@ -1,15 +1,15 @@
 
 package dairy_m;
 
-public class Gui extends javax.swing.JDialog {
+public class Dashboard extends javax.swing.JDialog {
 
-    public Gui(java.awt.Frame parent, boolean modal) {
+    public Dashboard(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
     }
 
-    public Gui() {
+    public Dashboard() {
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -19,18 +19,18 @@ public class Gui extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Gui dialog = new Gui(new javax.swing.JFrame(), true);
+                Dashboard dialog = new Dashboard(new javax.swing.JFrame(), true);
                 dialog.setSize(901, 588);
                 dialog.setResizable(false);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {

@@ -60,7 +60,9 @@ public class Farmer_details extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -71,14 +73,15 @@ public class Farmer_details extends javax.swing.JDialog {
         Farmerid = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         farmername = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        search = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText(" Existing Farmer Detail's");
+        jLabel1.setText(" Existing Farmer's Detail");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 23, 369, -1));
 
         back.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
@@ -94,52 +97,51 @@ public class Farmer_details extends javax.swing.JDialog {
         table.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         table.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "S.no", "ID", "Name", "Address"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                new Object[][] {
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null },
+                        { null, null, null, null }
+                },
+                new String[] {
+                        "S.no", "ID", "Name", "Address"
+                }) {
+            Class[] types = new Class[] {
+                    java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
         });
         table.setPreferredSize(new java.awt.Dimension(300, 300));
@@ -149,32 +151,46 @@ public class Farmer_details extends javax.swing.JDialog {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel2.setText("Farmer_ID");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, 20));
 
         Farmerid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FarmeridActionPerformed(evt);
             }
         });
-        getContentPane().add(Farmerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 151, 40));
+        getContentPane().add(Farmerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 151, 40));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel3.setText("Farmer_Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
 
         farmername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                farmernameActionPerformed(evt);
+                actionPerformed(evt);
             }
         });
-        getContentPane().add(farmername, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 151, 40));
+        getContentPane().add(farmername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 151, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 840, 510));
+        search.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        search.setText("Search");
+        search.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 70, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 840, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_searchActionPerformed
 
     private void FarmeridActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_FarmeridActionPerformed
         // TODO add your handling code here:
@@ -201,8 +217,9 @@ public class Farmer_details extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton search;
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 

@@ -1,6 +1,9 @@
 
 package dairy_m;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 91975
@@ -60,44 +63,99 @@ public class New_Farmer extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        farmeraddress = new javax.swing.JTextField();
+        farmerid = new javax.swing.JTextField();
+        farmername = new javax.swing.JTextField();
+        insert = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("New Farmer Detail's");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" New Farmer's  Detail ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 17, -1, -1));
 
-        back.setText("back");
+        back.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        back.setText(" Back ");
+        back.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 17, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(back)
-                                .addGap(283, 283, 283)
-                                .addComponent(jLabel1)
-                                .addContainerGap(411, Short.MAX_VALUE)));
-        layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(back)
-                                        .addComponent(jLabel1))
-                                .addContainerGap(533, Short.MAX_VALUE)));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 17)); // NOI18N
+        jLabel2.setText("Farmer ID ");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 126, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 17)); // NOI18N
+        jLabel3.setText("Farmer Name");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 126, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 17)); // NOI18N
+        jLabel4.setText("Farmer Address");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 126, -1, -1));
+        getContentPane().add(farmeraddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 174, 157, 43));
+
+        farmerid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                farmeridActionPerformed(evt);
+            }
+        });
+        getContentPane().add(farmerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 174, 157, 43));
+        getContentPane().add(farmername, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 174, 157, 43));
+
+        insert.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        insert.setText("Insert");
+        insert.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        insert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insertActionPerformed(evt);
+            }
+        });
+        getContentPane().add(insert, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 334, 82, 39));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void farmeridActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmeridActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_farmeridActionPerformed
+
+    private void insertActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_insertActionPerformed
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
+                    "root", "2412");
+            String sql = "insert into(farmer_id, farmer_name , farmer_address) farmer values(?,?,?)";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(2, Integer.parseInt(farmerid.getText()));
+            pstmt.setString(3, farmername.getText());
+            pstmt.setString(4, farmeraddress.getText());
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Insertion Successfull");
+            con.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e, null, 0);
+        }
+
+    }// GEN-LAST:event_insertActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed
         Farmer f = new Farmer();
@@ -110,6 +168,14 @@ public class New_Farmer extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
+    private javax.swing.JTextField farmeraddress;
+    private javax.swing.JTextField farmerid;
+    private javax.swing.JTextField farmername;
+    private javax.swing.JButton insert;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

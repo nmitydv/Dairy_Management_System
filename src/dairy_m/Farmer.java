@@ -145,7 +145,7 @@ public class Farmer extends javax.swing.JDialog {
     }
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {
-        Gui g = new Gui();
+        Dashboard g = new Dashboard();
         dispose();
     }
 
