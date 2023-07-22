@@ -62,6 +62,7 @@ public class Farmer_details extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -98,46 +99,46 @@ public class Farmer_details extends javax.swing.JDialog {
         table.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         table.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][] {
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null },
-                        { null, null, null, null }
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null },
+                        { null, null, null }
                 },
                 new String[] {
-                        "S.no", "ID", "Name", "Address"
+                        "ID", "Name", "Address"
                 }) {
             Class[] types = new Class[] {
-                    java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                    java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
