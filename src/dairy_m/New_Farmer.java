@@ -1,6 +1,7 @@
 
 package dairy_m;
 
+import java.awt.event.ActionEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -65,6 +66,8 @@ public class New_Farmer extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -76,6 +79,7 @@ public class New_Farmer extends javax.swing.JDialog {
         farmeraddress = new javax.swing.JTextField();
         farmerid = new javax.swing.JTextField();
         farmername = new javax.swing.JTextField();
+        clear = new javax.swing.JButton();
         insert = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
@@ -118,6 +122,16 @@ public class New_Farmer extends javax.swing.JDialog {
         getContentPane().add(farmerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 174, 157, 43));
         getContentPane().add(farmername, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 174, 157, 43));
 
+        clear.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        clear.setText("Clear");
+        clear.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
+        getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 82, 39));
+
         insert.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         insert.setText("Insert");
         insert.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -126,17 +140,27 @@ public class New_Farmer extends javax.swing.JDialog {
                 insertActionPerformed(evt);
             }
         });
-        getContentPane().add(insert, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 334, 82, 39));
+        getContentPane().add(insert, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 82, 39));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 470));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 840, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void insert1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_insert1ActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_insert1ActionPerformed
+
     private void farmeridActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmeridActionPerformed
         // TODO add your handling code here:
+    }// GEN-LAST:event_farmeridActionPerformed
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmeridActionPerformed
+        farmerid.setText(null);
+        farmername.setText(null);
+        farmeraddress.setText(null);
     }// GEN-LAST:event_farmeridActionPerformed
 
     private void insertActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_insertActionPerformed
@@ -169,6 +193,7 @@ public class New_Farmer extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
+    private javax.swing.JButton clear;
     private javax.swing.JTextField farmeraddress;
     private javax.swing.JTextField farmerid;
     private javax.swing.JTextField farmername;
