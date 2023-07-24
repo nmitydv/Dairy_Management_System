@@ -46,6 +46,7 @@ public class New_Farmer extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 New_Farmer dialog = new New_Farmer(new javax.swing.JFrame(), true);
+                dialog.setLocation(550, 230);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

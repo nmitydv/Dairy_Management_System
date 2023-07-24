@@ -41,6 +41,7 @@ public class Milk extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Milk dialog = new Milk(new javax.swing.JFrame(), true);
+                dialog.setLocation(550, 230);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -60,7 +61,8 @@ public class Milk extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -111,10 +113,10 @@ public class Milk extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addinformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addinformationActionPerformed
+    private void addinformationActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addinformationActionPerformed
         Add_Information ai = new Add_Information();
         dispose();
-    }//GEN-LAST:event_addinformationActionPerformed
+    }// GEN-LAST:event_addinformationActionPerformed
 
     private void existinginformationActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_existinginformationActionPerformed
         Milk_information mi = new Milk_information();

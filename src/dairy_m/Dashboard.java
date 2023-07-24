@@ -31,6 +31,7 @@ public class Dashboard extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Dashboard dialog = new Dashboard(new javax.swing.JFrame(), true);
+                dialog.setLocation(550, 230);
                 dialog.setSize(901, 588);
                 dialog.setResizable(false);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -116,6 +117,7 @@ public class Dashboard extends javax.swing.JDialog {
         jLabel1.setBounds(0, 0, 900, 590);
 
         pack();
+
     }
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {

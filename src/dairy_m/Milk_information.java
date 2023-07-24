@@ -24,6 +24,7 @@ public class Milk_information extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Milk_information dialog = new Milk_information(new javax.swing.JFrame(), true);
+                dialog.setLocation(550, 230);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

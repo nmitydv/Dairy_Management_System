@@ -41,6 +41,7 @@ public class Bill extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Bill dialog = new Bill(new javax.swing.JFrame(), true);
+                dialog.setLocation(550, 230);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -59,7 +60,8 @@ public class Bill extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -113,10 +115,10 @@ public class Bill extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void paymentstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentstatusActionPerformed
+    private void paymentstatusActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_paymentstatusActionPerformed
         CheckBill cb = new CheckBill();
         dispose();
-    }//GEN-LAST:event_paymentstatusActionPerformed
+    }// GEN-LAST:event_paymentstatusActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed
         Dashboard ds = new Dashboard();
