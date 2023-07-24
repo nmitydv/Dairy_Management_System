@@ -124,7 +124,8 @@ public class Dashboard extends javax.swing.JDialog {
     }
 
     private void milk_informationActionPerformed(java.awt.event.ActionEvent evt) {
-
+        Milk m = new Milk();
+        dispose();
     }
 
     private void billsActionPerformed(java.awt.event.ActionEvent evt) {
