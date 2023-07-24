@@ -129,7 +129,8 @@ public class Dashboard extends javax.swing.JDialog {
     }
 
     private void billsActionPerformed(java.awt.event.ActionEvent evt) {
-
+        Bill b = new Bill();
+        dispose();
     }
 
     private void farmer_detailActionPerformed(java.awt.event.ActionEvent evt) {

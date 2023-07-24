@@ -175,15 +175,15 @@ public class Add_Information extends javax.swing.JDialog {
             Class.forName("com.mysql.cj.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
                     "root", "2412");
-            String sql = "insert into farmer(type_of_milk, quantity, fat , farmer_id) values(?,?,?,?)";
+            String sql = "insert into milk(Datee, timee, type_of_milk, quantity, fat , farmer_id) values(?,?,?,?,?,?)";
             PreparedStatement pstmt = con.prepareStatement(sql);
-            // pstmt.setInt(2, Integer.parseInt(Farmer_id.getText()));
-            // pstmt.setString(2, Date.getText());
-            // pstmt.setString(3, Time.getText());
-            pstmt.setString(4, Type_of_Milk.getText());
-            pstmt.setInt(5, Integer.parseInt(Quantity.getText()));
-            pstmt.setInt(6, Integer.parseInt(Fat.getText()));
-            pstmt.setInt(7, Integer.parseInt(Farmer_id.getText()));
+            // pstmt.setInt(1, 3);
+            pstmt.setString(1, Date.getText());
+            pstmt.setString(2, Time.getText());
+            pstmt.setString(3, Type_of_Milk.getText());
+            pstmt.setInt(4, Integer.parseInt(Quantity.getText()));
+            pstmt.setInt(5, Integer.parseInt(Fat.getText()));
+            pstmt.setInt(6, Integer.parseInt(Farmer_id.getText()));
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Insertion Successfull");
             con.close();
