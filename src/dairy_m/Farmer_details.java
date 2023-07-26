@@ -84,6 +84,7 @@ public class Farmer_details extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -151,14 +152,14 @@ public class Farmer_details extends javax.swing.JDialog {
         getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 70, -1));
 
         search.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        search.setText("Search");
+        search.setText("Click Here");
         search.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchActionPerformed(evt);
             }
         });
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 70, -1));
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 80, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel4.setText("Farmer_ID");

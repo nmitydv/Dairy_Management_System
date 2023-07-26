@@ -4,6 +4,9 @@
  */
 package dairy_m;
 
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 /**
  *
  * @author 91975
@@ -133,7 +136,19 @@ public class Preparebill extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void prepareActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_prepareActionPerformed
-        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
+                    "root", "2412");
+            String sql = "Update farmer payment_status='done') where farmer_id" + farmerid.getText();
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+
+        }
+        int id = Integer.parseInt(farmerid.getText());
+        String name = farmername.getText();
+        new makeInvoice().makeInvoice(id, name);
     }// GEN-LAST:event_prepareActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed

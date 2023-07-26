@@ -59,6 +59,8 @@ public class Milk_information extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -66,12 +68,10 @@ public class Milk_information extends javax.swing.JDialog {
         back = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         Fat = new javax.swing.JTextField();
         Farmer_id = new javax.swing.JTextField();
         Date = new javax.swing.JTextField();
-        time = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         clear = new javax.swing.JButton();
@@ -104,15 +104,12 @@ public class Milk_information extends javax.swing.JDialog {
         jLabel3.setText("Date");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 114, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel4.setText("Time");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel5.setText("Fat");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(727, 114, 32, -1));
-        getContentPane().add(Fat, new org.netbeans.lib.awtextra.AbsoluteConstraints(727, 157, 82, 40));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 32, -1));
+        getContentPane().add(Fat, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 82, 40));
 
+        Farmer_id.setText("0");
         Farmer_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Farmer_idActionPerformed(evt);
@@ -129,7 +126,6 @@ public class Milk_information extends javax.swing.JDialog {
             }
         });
         getContentPane().add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 157, 124, 40));
-        getContentPane().add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 124, 40));
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][] {
@@ -180,11 +176,23 @@ public class Milk_information extends javax.swing.JDialog {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchActionPerformed
         int id = Integer.parseInt((Farmer_id.getText()));
+        String date = Date.getText();
+        int fatt = Integer.parseInt((Fat.getText()));
+
+        if (id != 0) {
+
+            datafarmerid(id);
+        }
+
+    }// GEN-LAST:event_searchActionPerformed
+
+    public void datafarmerid(int idd) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system", "root",
                     "2412");
-            String query = "Select f.farmer_name,m.farmer_id, m.datee ,m.timee, m.type_of_milk, m.quantity , m.fat from milk m  join farmer f ON f.farmer_id = m.farmer_id ";
+            String query = "Select f.farmer_name,m.farmer_id, m.datee ,m.timee, m.type_of_milk, m.quantity , m.fat from milk m  join farmer f ON f.farmer_id = m.farmer_id where m.farmer_id = "
+                    + idd;
             PreparedStatement pst = con.prepareStatement(query);
             ResultSet r = pst.executeQuery(query);
             while (r.next()) {
@@ -205,12 +213,11 @@ public class Milk_information extends javax.swing.JDialog {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e, null, 0);
         }
-    }// GEN-LAST:event_searchActionPerformed
+    }
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearActionPerformed
         Farmer_id.setText(null);
         Date.setText(null);
-        time.setText(null);
         Fat.setText(null);
         tbm.setRowCount(0);
 
@@ -235,11 +242,9 @@ public class Milk_information extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton search;
-    private javax.swing.JTextField time;
     // End of variables declaration//GEN-END:variables
 }
