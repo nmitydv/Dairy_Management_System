@@ -140,7 +140,7 @@ public class Preparebill extends javax.swing.JDialog {
             Class.forName("com.mysql.cj.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
                     "root", "2412");
-            String sql = "Update farmer payment_status='done') where farmer_id" + farmerid.getText();
+            String sql = "Update farmer set payment_status='done' where farmer_id = " + farmerid.getText();
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.executeUpdate();
         } catch (Exception e) {

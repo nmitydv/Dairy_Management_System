@@ -12,6 +12,9 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import javax.xml.crypto.dsig.spec.XPathType.Filter;
 
 import com.mysql.cj.xdevapi.Table;
 
@@ -175,26 +178,27 @@ public class Milk_information extends javax.swing.JDialog {
     static DefaultTableModel tbm;
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchActionPerformed
-        int id = Integer.parseInt((Farmer_id.getText()));
+
+        String id = Farmer_id.getText();
         String date = Date.getText();
-        int fatt = Integer.parseInt((Fat.getText()));
-
-        if (id != 0) {
-
-            datafarmerid(id);
+        String fat = Fat.getText();
+        if (date.equals("")) {
+            date = "2020-02-01";
+        } else {
+            date = Date.getText();
         }
 
-    }// GEN-LAST:event_searchActionPerformed
-
-    public void datafarmerid(int idd) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system", "root",
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
+                    "root",
                     "2412");
-            String query = "Select f.farmer_name,m.farmer_id, m.datee ,m.timee, m.type_of_milk, m.quantity , m.fat from milk m  join farmer f ON f.farmer_id = m.farmer_id where m.farmer_id = "
-                    + idd;
+            String query = "Select f.farmer_name,m.farmer_id, m.datee ,m.timee, m.type_of_milk, m.quantity , m.fat from milk m join farmer f ON f.farmer_id = m.farmer_id where m.farmer_id = ? OR m.Datee = ? OR m.Fat = ?";
             PreparedStatement pst = con.prepareStatement(query);
-            ResultSet r = pst.executeQuery(query);
+            pst.setString(1, id);
+            pst.setString(2, date);
+            pst.setString(3, fat);
+            ResultSet r = pst.executeQuery();
             while (r.next()) {
                 String Farmer_name = r.getString(1);
                 String farmer_id = r.getString(2);
@@ -213,6 +217,16 @@ public class Milk_information extends javax.swing.JDialog {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e, null, 0);
         }
+        // if (id != 0) {
+
+        // datafarmerid(id);
+        // }
+
+    }
+    // GEN-LAST:event_searchActionPerformed
+
+    public void datafarmerid(int idd) {
+
     }
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearActionPerformed
