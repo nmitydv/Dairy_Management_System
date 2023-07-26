@@ -16,12 +16,15 @@ import javax.swing.table.DefaultTableModel;
  * @author 91975
  */
 public class Farmer_details extends javax.swing.JDialog {
+
     public Farmer_details(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+
     }
 
     public Farmer_details() {
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -78,7 +81,10 @@ public class Farmer_details extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -86,12 +92,10 @@ public class Farmer_details extends javax.swing.JDialog {
         back = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        farmername = new javax.swing.JTextField();
         clear = new javax.swing.JButton();
         search = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        farmerid = new javax.swing.JTextField();
+        fid = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
@@ -117,69 +121,24 @@ public class Farmer_details extends javax.swing.JDialog {
         Table.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Table.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "ID", "Name", "Address"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                new Object[][] {
+
+                },
+                new String[] {
+                        "ID", "Name", "Address"
+                }) {
+            Class[] types = new Class[] {
+                    java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
         });
         Table.setPreferredSize(new java.awt.Dimension(300, 300));
         jScrollPane1.setViewportView(Table);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 193, 840, 318));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jLabel3.setText("Farmer_Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
-
-        farmername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                farmernameActionPerformed(evt);
-            }
-        });
-        getContentPane().add(farmername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 151, 40));
 
         clear.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         clear.setText("Clear");
@@ -205,12 +164,16 @@ public class Farmer_details extends javax.swing.JDialog {
         jLabel4.setText("Farmer_ID");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
-        farmerid.addActionListener(new java.awt.event.ActionListener() {
+        fid.setText("0");
+        fid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                farmeridActionPerformed(evt);
+                fidActionPerformed(evt);
+            }
+
+            private void fidActionPerformed(ActionEvent evt) {
             }
         });
-        getContentPane().add(farmerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 151, 40));
+        getContentPane().add(fid, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 151, 40));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.jpg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 840, 510));
@@ -218,32 +181,60 @@ public class Farmer_details extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void farmeridActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_farmeridActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_farmeridActionPerformed
-
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearActionPerformed
-        farmername.setText(null);
+        tbm.setRowCount(0);
+        fid.setText(null);
+        Table.setToolTipText(null);
     }// GEN-LAST:event_clearActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchActionPerformed
+
+        int id = Integer.parseInt((fid.getText()));
+        if (fid.getText().equals("0")) {
+            alldata();
+        } else {
+            database(id);
+        }
+    }// GEN-LAST:event_searchActionPerformed
+
+    static DefaultTableModel tbm;
+
+    public static void alldata() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system", "root",
                     "2412");
-            Statement pr = con.createStatement();
-            // String cust_id= "Where Farmer_name ="+Cust_id.getText();
-            String name = farmername.getText();
-            String query = "Select * from farmer where farmer_id = " + farmerid.getText();
-            // String query2 = "OR farmer_name = ";
-            // String query2=" Where bill_id ="+Cust_id.getText();
-            ResultSet r = pr.executeQuery(query);
+            String query = "Select * from farmer";
+            PreparedStatement pst = con.prepareStatement(query);
+            ResultSet r = pst.executeQuery(query);
             while (r.next()) {
                 String farmer_id = r.getString(1);
                 String farmer_name = r.getString(2);
                 String farmer_address = r.getString(3);
-                // String payment_s = r.getString(4);
-                // String amount = r.getString(5);
+                String tb[] = { farmer_id, farmer_name, farmer_address
+                };
+                tbm = (DefaultTableModel) Table.getModel();
+                tbm.addRow(tb);
+
+            }
+        } catch (Exception e) {
+            // JOptionPane.showMessageDialog(Table, e, name, id);
+        }
+    }
+
+    public static void database(int id) {
+        tbm.setRowCount(0);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system", "root",
+                    "2412");
+            String query = "Select * from farmer where " + "farmer_id = " + id;
+            PreparedStatement pst = con.prepareStatement(query);
+            ResultSet r = pst.executeQuery(query);
+            while (r.next()) {
+                String farmer_id = r.getString(1);
+                String farmer_name = r.getString(2);
+                String farmer_address = r.getString(3);
                 String tb[] = { farmer_id, farmer_name, farmer_address
                 };
                 DefaultTableModel tbm = (DefaultTableModel) Table.getModel();
@@ -252,9 +243,9 @@ public class Farmer_details extends javax.swing.JDialog {
 
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e, null, 0);
+            JOptionPane.showMessageDialog(Table, e, null, id);
         }
-    }// GEN-LAST:event_searchActionPerformed
+    }
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed
         Farmer f = new Farmer();
@@ -267,14 +258,12 @@ public class Farmer_details extends javax.swing.JDialog {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Table;
+    private static javax.swing.JTable Table;
     private javax.swing.JButton back;
     private javax.swing.JButton clear;
-    private javax.swing.JTextField farmerid;
-    private javax.swing.JTextField farmername;
+    private javax.swing.JTextField fid;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;

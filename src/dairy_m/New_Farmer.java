@@ -165,6 +165,7 @@ public class New_Farmer extends javax.swing.JDialog {
     }// GEN-LAST:event_farmeridActionPerformed
 
     private void insertActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_insertActionPerformed
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairy_management_system",
